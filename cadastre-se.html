@@ -71,23 +71,61 @@
 
               <!-- Nome-->
               <div class="form-group row">
-                  <label for="nome" class="col-sm-2 col-form-label">Nome</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nome">
-                  </div>
-                   <!-- Data de Nascimento-->
+                <label for="nome">Nome</label>
+                  <input type="text" class="form-control" id="nome">
+                </div>
+              <!-- Data de Nascimento-->
               <div class="form-group row">
-                  <label for="Nascimento" class="col-sm-2 col-form-label">Data de Nascimento</label>
-                  <div class="col-sm-10">
-                    <input type="date" class="form-control" id="dataNascimento">
+                <label for="dataNascimento" >Data de Nascimento</label>
+                  <input type="date" class="form-control" id="dataNascimento">
+              </div>
+              <!--Sexo -->
+              <div class="form-group row">
+                <label>Sexo: </label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="radioFeminino" name="radioSexo" class="custom-control-input">
+                    <label class="custom-control-label" for="radioFeminino"> Feminino</label>
                   </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="radioMasculino" name="radioSexo" class="custom-control-input">
+                    <label class="custom-control-label" for="radioMasculino"> Masculino</label>
+                  </div>
+                </div>
+              <!--Formação e Profissão-->
+              <div class="form-group row">
+                <!--Formação-->
+                <label for="selectFormacao">Formação: </label>
+                  <select class="form-control" id="selectFormacao">
+                    <option> ----- </option>
+                    <option> Ensino Fundamental</option>
+                    <option> Ensino Médio</option>
+                    <option> Ensino Superior</option>
+                  </select>
+                <!-- Profissão-->
+                <label for="selectProficao">Profissão: </label>
+                  <select class="form-control" id="selectProficao">
+                    <option> ----- </option>
+                    <option> Analista de Sistemas</option>
+                    <option> Dev. Frontend</option>
+                    <option> Dev. Backend</option>
+                    <option> Dev. FullSatck</option>
+                  </select>
+              </div>
+              <!--CPF-->
+              <div class="form-group row">
+                <label for="cpf">CPF: </label>
+                  <input type="text" class="form-control" id="cpf">
+              </div>
+
             </div>
           </div>
-        </fieldset>
+          <!-- Terminar class row-->
       </div>
+      <!---->
+      </fieldset>
     </div>
 
-    <!--Fim do container-->
+  <!--Fim do container-->
   </div>
 
   <!-- Optional JavaScript -->
