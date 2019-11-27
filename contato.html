@@ -12,12 +12,13 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/sparrow-events.css">
+  <link rel="stylesheet" href="node_modules/toastr/build/toastr.css">
 
   <title>Sparrow-events - home</title>
 </head>
 
 <body class="d-flex flex-column h-100">
-      <!--#region BARRA DE NAVEGAÇÃO-->
+  <!--#region BARRA DE NAVEGAÇÃO-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-roxo">
     <a class="navbar-brand" href="#">Sparrow events</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -55,62 +56,73 @@
       </form>
     </div>
   </nav>
-      <!--#endregion-->
+  <!--#endregion-->
 
   <!-- Principal jumbotron, para a principal mensagem de marketing ou call to action -->
-  <div class="jumbotron">
-    <div class="container">
-     
+  <div class="row">
+    <div class="container-fluid">
+      <iframe style="width: 100%; border:0;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10643.570825441207!2d-40.067381148935205!3d-19.409357348618478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb628aa4674e73f%3A0xb1e5bd7adb87b443!2sSenai!5e0!3m2!1spt-BR!2sbr!4v1574807348665!5m2!1spt-BR!2sbr"
+        height="234" frameborder="0" allowfullscreen=""></iframe>
     </div>
   </div>
 
   <main role="main" class="flex-shrink-0 mb-5">
     <div class="container">
-    <!--#regionDetalhamento Dos Eventos-->
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <a href="evento-detalhar.html"><img class="card-img-top" src="assets/img/Rock_in_Rio_-_Madrid_2012.jpg"
-                alt="Imagem de capa do card"></a>
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo
-                do card.</p>
-              <a href="evento-detalhar.html" class="btn btn-primary">Visitar</a>
-            </div>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-sm-12">
+            <fieldset>
+              <legend>Formulário de contato</legend>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input name="nome" type="text" class="form-control"  id="nome" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control" id="email" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="telefone">Telefone/Celular</label>
+                    <input name="telefone" type="text" class="form-control celular_DDD" id="telefone" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <input name="assunto" type="text" class="form-control" id="assunto" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" type="text" class="form-control" id="mensagem" required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-success">Enviar Mensagem</button>
+                    <button type="reset" class="btn btn-outline-dark">Limpar Formulário</button>
+                  </div>
+            </fieldset>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <a href="evento-detalhar.html"><img class="card-img-top" src="assets/img/dan-reynolds-vocalista-do-imagine-dragons-no-palco-mundo-do-rock-in-rio-1570416968657_v2_900x506.jpg"
-                alt="Imagem de capa do card"></a>
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo
-                do card.</p>
-              <a href="evento-detalhar.html" class="btn btn-primary">Visitar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <a href="evento-detalhar.html"><img class="card-img-top" src="assets/img/rock-in-rio-sunset-2019-ariel-martini.jpg"
-                alt="Imagem de capa do card"></a>
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
-                conteúdo
-                do card.</p>
-              <a href="evento-detalhar.html" class="btn btn-primary">Visitar</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+    </form>
 
     </div>
-             <!--#endregion-->
+    <!--#endregion-->
 
   </main>
 
@@ -121,14 +133,37 @@
       <span class="text-muted">Coloque o conteúdo do sticky footer aqui.</span>
     </div>
   </footer>
-    <!--#endregion-->
+  <!--#endregion-->
 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="assets/js/jquery_mask-plugin-custom.js"></script>
+  <script src="node_modules/toastr/build/toastr.min.js"></script>
+  <script>
+      // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+          var forms = document.getElementsByClassName('needs-validation');
+          // Faz um loop neles e evita o envio
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
 </body>
 
 </html>
