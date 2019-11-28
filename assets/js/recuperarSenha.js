@@ -1,55 +1,24 @@
-$(function(){
-    'use strict';
+var visibilidade = true; //Variável que vai manipular o botão Exibir/ocultar
+ 
+function exibir() {
+    document.getElementById("loginSenha").style.display = "block";
+}
+ 
+function ocultar() {
+    document.getElementById("loginSenha").style.display = "none";
+    document.getElementById("some").style.display = "none";
 
-    var recuperarSenha = $("#loginSenha");
+}
+ 
+function ocultarExibir() { // Quando clicar no botão.
 
-    recuperarSenha.hide();
-
-    $(document).on('click', 'input[type=radio]', function() {
-        var id = $(this).prop('id');
-        ocultar(id);
-    });
-
-    function ocultar(id){
-        switch (id) {
-            case 'es':
-                $('#divTipoDocumento label').text('CPF').prop('for', 'cpf');
-                $('#divTipoDocumento label').prop('name','cpf').prop('id', 'cpf');
-
-                tipoDocumento.show();
-
-                $("#divNomeRazaoSocial label").text('Nome').prop('for','nome');
-                $("#divNomeRazaoSocial label").prop('name','nome').prop('id', 'nome');
-                nomeRazaoSocial.show();
-                divNomeFantasia.hide();
-                divInscricaoEstadual.hide();
-                break;
-
-            case 'pj':
-                    $('#divTipoDocumento label').text('CNPJ')
-                    $('#divTipoDocumento label').prop('name', 'cnpj');
-                    $('#divTipoDocumento label').prop('id','cnpj');
-                    tipoDocumento.show();
-                    $('#divNomeRazaoSocial label').text('Razao Social');
-                    $('#divNomeRazaoSocial label').prop('for', 'razaoSocial');
-                    $('#divNomeRazaoSocial input').prop('name','razaoSocial');
-                    $('#divNomeRazaoSocial input').prop('id','razaoSocial');
-                    nomeRazaoSocial.show();
-                    $('#divNomeFantasia label').text('Nome Fantasia');
-                    $('#divNomeFantasia label').prop('for','nomeFantasia');
-                    $('#divNomeFantasia input').prop('name', 'nomeFantasia');
-                    $('#divNomeFantasia input').prop('id', 'nomeFantasia');
-                    divNomeFantasia.show();
-                    $('#divInscricaoEstadual label').text('Inscricao Estadual');
-                    $('#divInscricaoEstadual label').prop('for','inscricaoEstadual');
-                    $('#divInscricaoEstadual input').prop('name', 'inscricaoEstadual');
-                    $('#divInscricaoEstadual input').prop('id', 'inscricaoEstadual');
-                    divInscricaoEstadual.show();
-                    break;
-            default:
-                break;
-        }
+    if (visibilidade) {//Se a variável visibilidade for igual a true, então...
+        document.getElementById("esqueciasenha").style.display = "none";//Ocultamos a div
+        document.getElementById("somee").style.display = "none";//Ocultamos a div
+        visibilidade = false;//alteramos o valor da variável para falso.
+    } else {//ou se a variável estiver com o valor false..
+        document.getElementById("esqueciasenha").style.display = "block";//Exibimos a div..
+        document.getElementById("somee").style.display = "none";//Ocultamos a div
+        visibilidade = true;//Alteramos o valor da variável para true.
     }
-});
-
-                    
+}
